@@ -1,0 +1,9 @@
+---
+- hosts: all
+  gather_facts: true
+  become: true
+  become_user: george
+  tasks:
+    - apt:
+        name: tcpdump
+      when: ansible_os_family == "Debian"
