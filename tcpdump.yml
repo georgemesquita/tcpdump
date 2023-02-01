@@ -2,7 +2,7 @@
 - hosts: all
   gather_facts: true
   become: true
-  become_user: george
+  become_user: root
   tasks:
     - apt:
         name: tcpdump
